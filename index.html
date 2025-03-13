@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards para Estudiar Inglés</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json"> <!-- Enlace al Manifest -->
+</head>
+<body>
+
+    <h1>Flashcards para Estudiar Inglés</h1>
+
+    <!-- Botones principales -->
+    <button id="addFlashcardBtn">Agregar Flashcard</button>
+    <button id="viewAllFlashcardsBtn">Ver Todas las Flashcards</button>
+    <button id="viewMedalsBtn">Ver Medallas</button> <!-- Nuevo botón para ver medallas -->
+
+    <!-- Contenedor para mostrar las flashcards -->
+    <div id="flashcardsContainer"></div>
+
+    <!-- Botón "Volver a Estudiar" que aparece cuando no haya flashcards pendientes -->
+    <button id="restartStudyBtn" style="display: none;">Volver a Estudiar</button>
+
+    <!-- Modal para agregar una nueva flashcard -->
+    <div id="flashcardModal" class="modal">
+        <div class="modal-content">
+            <h2>Agregar nueva Flashcard</h2>
+            <label for="englishWord">Palabra en Inglés:</label>
+            <input type="text" id="englishWord" required><br>
+            <label for="meaning">Significado:</label>
+            <input type="text" id="meaning" required><br>
+            <button id="saveFlashcardBtn">Guardar Flashcard</button>
+            <button id="closeModalBtn">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Página de medallas -->
+    <div id="medalsPage" style="display: none;">
+        <h2>Mis Medallas</h2>
+        <div id="medalsContainer"></div>
+        <button id="backToStudyBtn">Volver a Estudiar</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
